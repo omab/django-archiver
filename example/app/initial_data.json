@@ -1,0 +1,70 @@
+[
+    {
+        "pk": 1,
+        "model": "app.car",
+        "fields": {
+            "model": "Pink Sedan"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "app.car",
+        "fields": {
+            "model": "Orange Sedan"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "app.house",
+        "fields": {
+            "address": "742 Evergreen Terrace"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "app.parent",
+        "fields": {
+            "house": 1,
+            "name": "Homer",
+            "gender": "m",
+            "cars": [1]
+        }
+    },
+    {
+        "pk": 2,
+        "model": "app.parent",
+        "fields": {
+            "house": 1,
+            "name": "Marge",
+            "gender": "f",
+            "cars": [2]
+        }
+    },
+    {
+        "pk": 1,
+        "model": "app.child",
+        "fields": {
+            "name": "Bart",
+            "dad": 1,
+            "mom": 2
+        }
+    },
+    {
+        "pk": 1,
+        "model": "app.child",
+        "fields": {
+            "name": "Lisa",
+            "dad": 1,
+            "mom": 2
+        }
+    },
+    {
+        "pk": 1,
+        "model": "app.child",
+        "fields": {
+            "name": "Maggie",
+            "dad": 1,
+            "mom": 2
+        }
+    }
+]
