@@ -2,14 +2,14 @@ from django.db import models
 from django.db.models.manager import Manager
 
 
-from model_migrations.query import MigrateQuerySet
+from archiver.query import ArchiverQuerySet
 
 
 class ParentManager(Manager):
     def get_query_set(self):
-        """Return a MigrateQuerySet allowing to migrate our
+        """Return a ArchiverQuerySet allowing to migrate our
         data to a another database"""
-        return MigrateQuerySet(self.model, using=self._db)
+        return ArchiverQuerySet(self.model, using=self._db)
 
 
 class Car(models.Model):

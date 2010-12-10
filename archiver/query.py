@@ -4,13 +4,13 @@ from django.db.models.fields.related import RelatedField
 # Usage:
 #
 # from django.db.models.manager import Manager
-# from model_migrations.query import MigrateQuerySet
+# from model_migrations.query import ArchiverQuerySet
 #
 # class MyModelManager(Manager):
 #     def get_query_set(self):
-#         return MigrateQuerySet(self.model, using=self._db)
+#         return ArchiverQuerySet(self.model, using=self._db)
 
-class MigrateQuerySet(QuerySet):
+class ArchiverQuerySet(QuerySet):
     def migrate(self, using=None):
         clone = self._clone()
         clone._for_write = True # flag query for write
